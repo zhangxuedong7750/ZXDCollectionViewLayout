@@ -13,6 +13,8 @@
 		E1EFA04F1C4DFAF400280235 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1EFA04D1C4DFAF400280235 /* Main.storyboard */; };
 		E1EFA0511C4DFAF400280235 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1EFA0501C4DFAF400280235 /* Assets.xcassets */; };
 		E1EFA0541C4DFAF400280235 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1EFA0521C4DFAF400280235 /* LaunchScreen.storyboard */; };
+		E1EFA05F1C4DFB0900280235 /* ZXDLineLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EFA05C1C4DFB0900280235 /* ZXDLineLayout.m */; };
+		E1EFA0601C4DFB0900280235 /* ZXDCircleLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EFA05E1C4DFB0900280235 /* ZXDCircleLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		E1EFA0501C4DFAF400280235 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1EFA0531C4DFAF400280235 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E1EFA0551C4DFAF400280235 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1EFA05B1C4DFB0900280235 /* ZXDLineLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXDLineLayout.h; sourceTree = "<group>"; };
+		E1EFA05C1C4DFB0900280235 /* ZXDLineLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXDLineLayout.m; sourceTree = "<group>"; };
+		E1EFA05D1C4DFB0900280235 /* ZXDCircleLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXDCircleLayout.h; sourceTree = "<group>"; };
+		E1EFA05E1C4DFB0900280235 /* ZXDCircleLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXDCircleLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,10 @@
 		E1EFA0431C4DFAF400280235 /* ZXDCollectionViewLayout */ = {
 			isa = PBXGroup;
 			children = (
+				E1EFA05B1C4DFB0900280235 /* ZXDLineLayout.h */,
+				E1EFA05C1C4DFB0900280235 /* ZXDLineLayout.m */,
+				E1EFA05D1C4DFB0900280235 /* ZXDCircleLayout.h */,
+				E1EFA05E1C4DFB0900280235 /* ZXDCircleLayout.m */,
 				E1EFA0471C4DFAF400280235 /* AppDelegate.h */,
 				E1EFA0481C4DFAF400280235 /* AppDelegate.m */,
 				E1EFA04A1C4DFAF400280235 /* ViewController.h */,
@@ -151,7 +161,9 @@
 			files = (
 				E1EFA04C1C4DFAF400280235 /* ViewController.m in Sources */,
 				E1EFA0491C4DFAF400280235 /* AppDelegate.m in Sources */,
+				E1EFA05F1C4DFB0900280235 /* ZXDLineLayout.m in Sources */,
 				E1EFA0461C4DFAF400280235 /* main.m in Sources */,
+				E1EFA0601C4DFB0900280235 /* ZXDCircleLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +274,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ZXDCollectionViewLayout/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Soufun.ZXDCollectionViewLayout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -273,6 +286,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ZXDCollectionViewLayout/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Soufun.ZXDCollectionViewLayout;
 				PRODUCT_NAME = "$(TARGET_NAME)";

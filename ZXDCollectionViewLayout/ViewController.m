@@ -7,8 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "ZXDLineLayout.h"
+#import "ZXDCircleLayout.h"
 
-@interface ViewController ()
+@interface ViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
+
+@property (nonatomic,strong) UICollectionView * collectionView;
 
 @end
 
@@ -16,12 +20,35 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    ZXDLineLayout * flowLayout  = [[ZXDLineLayout alloc] init];
+    flowLayout.itemSize = CGSizeMake(150, 150);
+    flowLayout.minimumInteritemSpacing = 10;
+    
+//    ZXDCircleLayout * flowLayout = [[ZXDCircleLayout alloc] init];
+//    flowLayout.itemSize = CGSizeMake(50, 50);
+    
+    UICollectionView * collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 60, self.view.frame.size.width, 200) collectionViewLayout:flowLayout];
+    collectionView.backgroundColor = [UIColor whiteColor];
+    [collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
+    self.collectionView = collectionView;
+    collectionView.delegate = self;
+    collectionView.dataSource = self;
+    [self.view addSubview:collectionView];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    
+    return 15;
+}
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    UICollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+    cell.backgroundColor = [UIColor blueColor];
+    return cell;
 }
 
 @end
